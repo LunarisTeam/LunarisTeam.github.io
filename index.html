@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay - Privacy Policy & Terms of Use</title>
+    <title>Clay - Privacy Policy & Contact us</title>
     
     <style>
         body {
@@ -118,7 +118,7 @@
         </div>
         <nav>
             <a href="#privacy-policy" id="privacy-link">Privacy Policy</a>
-            <a href="#terms-of-use" id="terms-link">Contact us</a>
+            <a href="#contact-us" id="contact-link">Contact us</a>
         </nav>
         
     </header>
@@ -151,7 +151,7 @@
                 <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:thelunaristeam@gmail.com">thelunaristeam@gmail.com</a>.</p>
             </div>
         </section>
-        <section id="terms-of-use" class="listElem">
+        <section id="contact-us" class="listElem">
             <h2>Contact us</h2>
             <div class="listElem">
                 <p>If you have any questions or concerns about these Terms, please contact us at <a href="mailto:thelunaristeam@gmail.com">thelunaristeam@gmail.com</a>.</p>
@@ -162,13 +162,13 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const privacyLink = document.getElementById('privacy-link');
-        const termsLink = document.getElementById('terms-link');
+        const contactLink = document.getElementById('contact-link');
         const privacySection = document.getElementById('privacy-policy');
-        const termsSection = document.getElementById('terms-of-use');
+        const contactSection = document.getElementById('contact-us');
 
         function showSection(sectionToShow) {
             privacySection.style.display = 'none';
-            termsSection.style.display = 'none';
+            contactSection.style.display = 'none';
             sectionToShow.style.display = 'block';
         }
 
@@ -176,16 +176,16 @@
             showSection(privacySection);
         });
 
-        termsLink.addEventListener('click', function() {
-            showSection(termsSection);
+        contactLink.addEventListener('click', function() {
+            showSection(contactSection);
         });
 
         // Show the section based on the URL hash
         const hash = window.location.hash;
         if (hash === '#privacy-policy') {
             showSection(privacySection);
-        } else if (hash === '#terms-of-use') {
-            showSection(termsSection);
+        } else if (hash === '#contact-use') {
+            showSection(contactSection);
         } else {
             // Default to showing Privacy Policy
             showSection(privacySection);
